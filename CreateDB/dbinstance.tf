@@ -4,8 +4,8 @@ provider "google" {
 project = "${var.project}"
 region = "${var.region}"
 }
-resource "google_sql_database_instance" "testdb" {
-name = "testdb"
+resource "google_sql_database_instance" "test-db" {
+name = "test-db"
 database_version = "MYSQL_5_7"
 region = "${var.region}"
 settings {
@@ -18,7 +18,7 @@ instance = "${google_sql_database_instance.testdb.name}"
 }
 
 resource "google_sql_user" "users" {
-name = "root"
+name = "harish"
 instance = "${google_sql_database_instance.testdb.name}"
 password = "password"
 }
