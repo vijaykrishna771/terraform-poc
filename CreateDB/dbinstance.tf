@@ -4,7 +4,7 @@ provider "google" {
 project = "${var.project}"
 region = "${var.region}"
 }
-resource "google_sql_database_instance" "test-db" {
+resource "google_sql_database_instance" "testdb" {
 name = "test-db"
 database_version = "MYSQL_5_7"
 region = "${var.region}"
